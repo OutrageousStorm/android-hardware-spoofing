@@ -1,13 +1,17 @@
 # 🎭 Android Hardware Spoofing
 
-Spoof IMEI, device fingerprint, serial — fool device checks.
+Tools to spoof device fingerprint, IMEI, and hardware identifiers.
 
-## Methods
-1. **Frida** (no root) — hook Build properties at runtime
-2. **Magisk** (rooted) — persistent via resetprop
-3. **Modification** — edit device props file (requires root)
+## Tools
 
-## Usage
-```bash
-frida -U -f com.banking.app -l spoof.js
+| Tool | What it does |
+|------|-------------|
+| `spoof_device.py` | Spoof device model, build fingerprint via Magisk |
+| `check_spoofing.py` | Detect which properties are spoofed |
+
+## Requirements
+```
+adb
+Python 3
+Magisk + Zygisk
 ```
